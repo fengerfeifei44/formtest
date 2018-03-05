@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>试用申请表</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./dist/css/bootstrapValidator.css"/>
+
+   <!-- <script type="text/javascript" src="./vendor/jquery/jquery-1.10.2.min.js"></script>-->
+    <script src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
+    <style>
+        body{
+            background: #f0fcff;
+            background-size: 100%;
+
+        }
+        .yuan{
+            position: absolute;
+           margin-top: -40px;
+            margin-left: -20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #b8e2ee;
+        }
+    </style>
+</head>
+<body>
+<div class="yuan"></div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="page-header">
+                <h2 style="text-align: center">试用申请表</h2>
+            </div>
+
+            <form id="defaultForm" method="post" class="form-horizontal" action="" style="padding: 0 25px">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">姓名</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="username" placeholder="请输入姓名"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">性别</label>
+                    <div class="col-lg-5">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sex" value="male" required  /> 男
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sex" value="female" /> 女
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">年龄</label>
+                    <div class="col-lg-5">
+                        <input type="number" class="form-control" name="age" placeholder="请输入年龄"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">工作单位</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="workAddress" placeholder="请输入工作单位"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">职业</label>
+                    <div class="col-lg-5">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="医师" required /> 医师
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="护理人员" /> 护理人员
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="医学科研人员" /> 医学科研人员
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="医院管理者" />医院管理者
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="企业管理者" />企业管理者
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="work" value="其他" />其他
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">职业证书编号</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="vocatN" placeholder="医师/护理人员必填"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">登录账号</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="loginAccount" placeholder="由4～15位字母、数字及下划线组成"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">登录密码</label>
+                    <div class="col-lg-5">
+                        <input type="password" class="form-control" name="password" placeholder="请输入6-20位密码"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">确认密码</label>
+                    <div class="col-lg-5">
+                        <input type="password" class="form-control" name="passwordT" placeholder="请再次输入密码"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">电子邮箱</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="email" placeholder="请输入正确电子邮箱地址"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">手机号</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="phone" placeholder="请输入手机号"  id="phone"/>
+                    </div>
+                </div>
+                <div class="form-group input-group">
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" placeholder="请输入验证码" name="code">
+                    </div>
+                    <span class="input-group-btn " style="padding-right: 15px">
+                        <input id="btnSendCode" class="btn btn-primary " type="button" value="发送验证码"  />
+      </span>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-9 col-lg-offset-3">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var flag=false;
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+    var n=0;
+
+    $('#defaultForm')
+        .bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    /*message: 'The username is not valid',*/
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        }
+
+                    }
+                },
+                sex: {
+                    validators: {
+                        notEmpty: {
+                            message: ' '
+                        }
+                    }
+                },
+                age: {
+                    validators: {
+                        notEmpty: {
+                            message: '年龄不能为空'
+                        }
+
+                    }
+                },
+                workAddress: {
+                    validators: {
+                        notEmpty: {
+                            message: '工作单位必填'
+                        }
+
+                    }
+                },
+                work: {
+                    validators: {
+                        notEmpty: {
+                            message: ' '
+                        }
+                    }
+                },
+                vocatN: {
+                    validators: {
+                        notEmpty: {
+                            message: '请填写职业证书编号'
+                        }
+                    }
+                },
+                loginAccount: {
+                    validators: {
+                        notEmpty: {
+                            message: '账号必须由4～15位字母、数字及下划线组成'
+                        },
+
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]{4,15}$/,
+                            message: '账号必须由4～15位字母、数字及下划线组成'
+                        }
+
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码必须为6～20位'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 20,
+                            message: '密码必须为6～20位'
+                        },
+                    }
+                },
+                passwordT: {
+                    validators: {
+                        notEmpty: {
+                            message: '请再次输入密码'
+                        },
+                        identical: {//相同
+                            field: 'password', //需要进行比较的input name值
+                            message: '两次输入的密码不一致'
+                        },
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱格式不正确'
+                        },
+                        emailAddress: {
+                            message: '邮箱格式不正确'
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入正确的手机号'
+                        },
+                        regexp: {
+                            regexp: /^1\d{10}$/,
+                            message: '请输入正确的手机号'
+                        }
+                    }
+                },
+
+            }
+        })
+        .on('success.form.bv', function(e) {
+            // Prevent form submission
+            e.preventDefault();
+           console.log("成功")
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+             console.log(bv)
+            // Use Ajax to submit form data
+
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+
+    function sendMessage() {
+        n++;
+        console.log(n)
+        if(n>2){
+            count=180;
+            n=0;
+            curCount = count;
+            //设置button效果，开始计时
+            $("#btnSendCode").attr("disabled", "true");
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+            InterValObj = window.setInterval(SetRemainTime180, 1000); //启动计时器，1秒执行一次
+
+        }else {
+            count=60;
+            curCount = count;
+            //设置button效果，开始计时
+            $("#btnSendCode").attr("disabled", "true");
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+        }
+
+        //向后台发送处理数据
+
+    }
+    function SetRemainTime180() {
+        if (curCount == 0) {
+            window.clearInterval(InterValObj);//停止计时器
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+            $("#btnSendCode").val("发送验证码");
+            location.reload();
+        }
+        else {
+            curCount--;
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+        }
+    }
+//timer处理函数
+    function SetRemainTime() {
+
+        if (curCount == 0) {
+            window.clearInterval(InterValObj);//停止计时器
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+            $("#btnSendCode").val("重新发送验证码");
+
+        }
+        else {
+            curCount--;
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+        }
+    }
+
+   /* function phonetest() {
+        $.post("sendSms.do",{"phone":phone},function(data){
+            var obj = eval('('+data+')');
+            if(obj.msg == 'ok'){
+                sendMessage();
+            }else if(obj.msg == 'no'){
+                alert('验证码输入错误')
+            }else if(obj.msg == 'phone'){
+                alert('手机号格式不正确')
+            }
+        });
+    }*/
+    $("#btnSendCode").click(function () {
+        var phone = $("#phone").val();
+        var phoneRe = /^1\d{10}$/g;
+        if(phone == ''|| !phoneRe.test(phone)){
+            console.log("错误")
+            $("#phone").parent().parent().addClass("has-error").find("small").last().show();
+
+        }else {
+            sendMessage()
+        }
+    })
+
+
+});
+
+
+
+
+</script>
+</body>
+</html>
