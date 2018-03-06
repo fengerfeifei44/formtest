@@ -201,7 +201,11 @@ $(document).ready(function() {
                 age: {
                     validators: {
                         notEmpty: {
-                            message: '请输入年龄'
+                            message: '请输入正确年龄'
+                        },
+                        regexp: {
+                            regexp: /^[1-9]\d?$|^1[01]\d$|^120$/,
+                            message: '请输入正确年龄'
                         }
 
                     }
@@ -304,7 +308,17 @@ $(document).ready(function() {
                 console.log(result);
             }, 'json');
         });
+    $("#btnSendCode").click(function () {
+        var phone = $("#phone").val();
+        var phoneRe = /^1\d{10}$/g;
+        if(phone == ''|| !phoneRe.test(phone)){
+            console.log("错误")
+            $("#phone").parent().parent().addClass("has-error").find("small").last().show();
 
+        }else {
+            sendMessage()
+        }
+    })
     function sendMessage() {
         n++;
         console.log(n)
@@ -368,17 +382,7 @@ $(document).ready(function() {
             }
         });
     }*/
-    $("#btnSendCode").click(function () {
-        var phone = $("#phone").val();
-        var phoneRe = /^1\d{10}$/g;
-        if(phone == ''|| !phoneRe.test(phone)){
-            console.log("错误")
-            $("#phone").parent().parent().addClass("has-error").find("small").last().show();
 
-        }else {
-            sendMessage()
-        }
-    })
 
 
 });
