@@ -1,0 +1,58 @@
+body{
+    background:url("../../images/index_bg.png") no-repeat;
+    background-size: 100%;
+
+}
+.page-header{
+    margin-top: 150px;
+    color: #3ea8ba;
+}
+.control-label{
+    display: inline-block;
+    color: #4f4f4f;
+    font-weight: 500;
+    margin-bottom: 6px !important;
+}
+.has-feedback .form-control {
+    padding-right:28px;
+    border-radius: 0;
+
+}
+.form-control:focus {
+    outline: none!important;
+    border-color: #ccc!important;
+    box-shadow: 0 0 0px rgba(207, 220, 0, 0.4)!important;
+
+}
+input{
+    outline: none !important;
+    -webkit-appearance: none;
+
+}
+
+.selectpicker{
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    color: #555;
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none !important;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+}
+.btn-primary:hover,.btn-primary, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #37bef0;
+    border-color: #37bef0;
+}
+.btn-primary[disabled]{
+    background-color: #37bef0 !important;
+    border-color: #37bef0 !important;
+}
+.btn.btn-primary.submit{
+    width: 60%;
+    background-color: #3ea8ba;
+    border-color: #3ea8ba;
+}

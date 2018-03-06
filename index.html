@@ -7,30 +7,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="./dist/css/bootstrapValidator.css"/>
-
+    <link rel="stylesheet" href="./dist/css/common.css">
    <!-- <script type="text/javascript" src="./vendor/jquery/jquery-1.10.2.min.js"></script>-->
     <script src="jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
-    <style>
-        body{
-            background: #f0fcff;
-            background-size: 100%;
 
-        }
-        .yuan{
-            position: absolute;
-           margin-top: -40px;
-            margin-left: -20px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #b8e2ee;
-        }
-    </style>
 </head>
 <body>
-<div class="yuan"></div>
+
 <div class="container">
 
     <div class="row">
@@ -39,7 +24,7 @@
                 <h2 style="text-align: center">试用申请表</h2>
             </div>
 
-            <form id="defaultForm" method="post" class="form-horizontal" action="" style="padding: 0 25px">
+            <form id="defaultForm" method="post" class="form-horizontal" action="" style="padding: 0 15px">
                 <div class="form-group">
                     <label class="col-lg-3 control-label">姓名</label>
                     <div class="col-lg-5">
@@ -49,16 +34,24 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">性别</label>
                     <div class="col-lg-5">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="sex" value="male" required  /> 男
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="sex" value="female" /> 女
-                            </label>
-                        </div>
+                        <select class="selectpicker form-control" name="sex">
+
+                            <option>男</option>
+                            <option>女</option>
+
+                        </select>
+
+
+                        <!--  <div class="radio">
+                              <label>
+                                  <input type="radio" name="sex" value="male" required  /> 男
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="sex" value="female" /> 女
+                              </label>
+                          </div>-->
                     </div>
                 </div>
                 <div class="form-group">
@@ -76,7 +69,17 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">职业</label>
                     <div class="col-lg-5">
-                        <div class="radio">
+                        <select class="selectpicker form-control" name="work">
+
+                            <option>医师</option>
+                            <option>护理人员</option>
+                            <option>医学科研人员</option>
+                            <option >医院管理者</option>
+                            <option >企业管理者</option>
+                            <option >其他</option>
+
+                        </select>
+                        <!--<div class="radio">
                             <label>
                                 <input type="radio" name="work" value="医师" required /> 医师
                             </label>
@@ -105,7 +108,7 @@
                             <label>
                                 <input type="radio" name="work" value="其他" />其他
                             </label>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="form-group">
@@ -155,8 +158,8 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-lg-9 col-lg-offset-3">
-                        <button type="submit" class="btn btn-primary">提交</button>
+                    <div class="col-lg-9 col-lg-offset-3" style="text-align: center;margin-top: 15px">
+                        <button type="submit" class="btn btn-primary submit">提交</button>
                     </div>
                 </div>
             </form>
